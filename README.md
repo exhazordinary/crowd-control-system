@@ -308,4 +308,4 @@ MIT
 
 ---
 
-Built with Next.js, FastAPI, and shadcn/ui for the Malaysian Events Hackathon 2024.
+Built with Next.js, FastAPI, and shadcn/ui.

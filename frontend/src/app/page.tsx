@@ -94,7 +94,7 @@ export default function HomePage() {
           className="mx-auto max-w-3xl text-center"
         >
           <Badge variant="secondary" className="mb-4">
-            Hackathon 2024
+            AI-Powered
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Predict. Simulate. Protect.
