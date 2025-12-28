@@ -1,0 +1,145 @@
+{
+  "venue_id": "axiata-arena",
+  "name": "Axiata Arena",
+  "venue_type": "arena",
+  "total_capacity": 16000,
+  "location": {
+    "lat": 3.0528,
+    "lng": 101.6926,
+    "address": "Bukit Jalil City",
+    "city": "Kuala Lumpur"
+  },
+  "gates": [
+    {
+      "gate_id": "main-entrance",
+      "name": "Main Entrance",
+      "capacity_per_minute": 200,
+      "location": [300, 500],
+      "is_emergency_exit": false,
+      "connected_zones": ["main-concourse"]
+    },
+    {
+      "gate_id": "vip-entrance",
+      "name": "VIP Entrance",
+      "capacity_per_minute": 80,
+      "location": [100, 300],
+      "is_emergency_exit": false,
+      "connected_zones": ["vip-lounge"]
+    },
+    {
+      "gate_id": "east-entrance",
+      "name": "East Entrance",
+      "capacity_per_minute": 150,
+      "location": [500, 300],
+      "is_emergency_exit": false,
+      "connected_zones": ["main-concourse"]
+    },
+    {
+      "gate_id": "merch-gate",
+      "name": "Merchandise Gate",
+      "capacity_per_minute": 100,
+      "location": [300, 100],
+      "is_emergency_exit": false,
+      "connected_zones": ["merch-area"]
+    },
+    {
+      "gate_id": "emergency-exit-1",
+      "name": "Emergency Exit 1",
+      "capacity_per_minute": 400,
+      "location": [50, 500],
+      "is_emergency_exit": true,
+      "connected_zones": ["standing-b"]
+    },
+    {
+      "gate_id": "emergency-exit-2",
+      "name": "Emergency Exit 2",
+      "capacity_per_minute": 400,
+      "location": [550, 500],
+      "is_emergency_exit": true,
+      "connected_zones": ["seated-lower"]
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "standing-a",
+      "name": "Standing Zone A (Moshpit)",
+      "capacity": 3000,
+      "area_sqm": 600,
+      "zone_type": "standing",
+      "connected_zones": ["standing-b", "main-concourse"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "standing-b",
+      "name": "Standing Zone B",
+      "capacity": 4000,
+      "area_sqm": 1000,
+      "zone_type": "standing",
+      "connected_zones": ["standing-a", "main-concourse"],
+      "connected_gates": ["emergency-exit-1"]
+    },
+    {
+      "zone_id": "seated-lower",
+      "name": "Lower Bowl Seating",
+      "capacity": 5000,
+      "area_sqm": 2500,
+      "zone_type": "seating",
+      "connected_zones": ["main-concourse"],
+      "connected_gates": ["emergency-exit-2"]
+    },
+    {
+      "zone_id": "seated-upper",
+      "name": "Upper Bowl Seating",
+      "capacity": 3500,
+      "area_sqm": 2000,
+      "zone_type": "seating",
+      "connected_zones": ["main-concourse"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "vip-section",
+      "name": "VIP Section",
+      "capacity": 500,
+      "area_sqm": 400,
+      "zone_type": "vip",
+      "connected_zones": ["vip-lounge"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "vip-lounge",
+      "name": "VIP Lounge",
+      "capacity": 200,
+      "area_sqm": 300,
+      "zone_type": "vip",
+      "connected_zones": ["vip-section", "main-concourse"],
+      "connected_gates": ["vip-entrance"]
+    },
+    {
+      "zone_id": "main-concourse",
+      "name": "Main Concourse",
+      "capacity": 3000,
+      "area_sqm": 2000,
+      "zone_type": "concourse",
+      "connected_zones": ["standing-a", "standing-b", "seated-lower", "seated-upper", "merch-area", "food-court"],
+      "connected_gates": ["main-entrance", "east-entrance"]
+    },
+    {
+      "zone_id": "merch-area",
+      "name": "Merchandise Area",
+      "capacity": 1000,
+      "area_sqm": 400,
+      "zone_type": "retail",
+      "connected_zones": ["main-concourse"],
+      "connected_gates": ["merch-gate"]
+    },
+    {
+      "zone_id": "food-court",
+      "name": "Food Court",
+      "capacity": 800,
+      "area_sqm": 500,
+      "zone_type": "food",
+      "connected_zones": ["main-concourse"],
+      "connected_gates": []
+    }
+  ]
+}

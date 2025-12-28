@@ -1,0 +1,145 @@
+{
+  "venue_id": "pavilion-kl",
+  "name": "Pavilion Kuala Lumpur",
+  "venue_type": "convention",
+  "total_capacity": 25000,
+  "location": {
+    "lat": 3.1488,
+    "lng": 101.7133,
+    "address": "168, Jalan Bukit Bintang",
+    "city": "Kuala Lumpur"
+  },
+  "gates": [
+    {
+      "gate_id": "bukit-bintang-entrance",
+      "name": "Bukit Bintang Entrance",
+      "capacity_per_minute": 400,
+      "location": [300, 600],
+      "is_emergency_exit": false,
+      "connected_zones": ["level-1"]
+    },
+    {
+      "gate_id": "mrt-connection",
+      "name": "MRT Pavilion Connection",
+      "capacity_per_minute": 250,
+      "location": [100, 400],
+      "is_emergency_exit": false,
+      "connected_zones": ["mrt-link"]
+    },
+    {
+      "gate_id": "raja-chulan-entrance",
+      "name": "Raja Chulan Entrance",
+      "capacity_per_minute": 300,
+      "location": [500, 400],
+      "is_emergency_exit": false,
+      "connected_zones": ["level-1"]
+    },
+    {
+      "gate_id": "parking-entrance",
+      "name": "Parking Entry",
+      "capacity_per_minute": 150,
+      "location": [300, 100],
+      "is_emergency_exit": false,
+      "connected_zones": ["parking"]
+    },
+    {
+      "gate_id": "emergency-bukit-bintang",
+      "name": "Emergency Exit - Bukit Bintang",
+      "capacity_per_minute": 500,
+      "location": [400, 600],
+      "is_emergency_exit": true,
+      "connected_zones": ["level-1"]
+    },
+    {
+      "gate_id": "emergency-raja-chulan",
+      "name": "Emergency Exit - Raja Chulan",
+      "capacity_per_minute": 500,
+      "location": [500, 500],
+      "is_emergency_exit": true,
+      "connected_zones": ["level-2"]
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "centre-court",
+      "name": "Centre Court",
+      "capacity": 3000,
+      "area_sqm": 800,
+      "zone_type": "event",
+      "connected_zones": ["level-1"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "level-1",
+      "name": "Level 1 Concourse",
+      "capacity": 5000,
+      "area_sqm": 4000,
+      "zone_type": "concourse",
+      "connected_zones": ["centre-court", "level-2", "outdoor-plaza"],
+      "connected_gates": ["bukit-bintang-entrance", "raja-chulan-entrance", "emergency-bukit-bintang"]
+    },
+    {
+      "zone_id": "level-2",
+      "name": "Level 2",
+      "capacity": 4000,
+      "area_sqm": 3500,
+      "zone_type": "retail",
+      "connected_zones": ["level-1", "level-3", "food-republic"],
+      "connected_gates": ["emergency-raja-chulan"]
+    },
+    {
+      "zone_id": "level-3",
+      "name": "Level 3",
+      "capacity": 4000,
+      "area_sqm": 3500,
+      "zone_type": "retail",
+      "connected_zones": ["level-2", "dining-loft"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "food-republic",
+      "name": "Food Republic",
+      "capacity": 2000,
+      "area_sqm": 1200,
+      "zone_type": "food",
+      "connected_zones": ["level-2"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "dining-loft",
+      "name": "Dining Loft",
+      "capacity": 1500,
+      "area_sqm": 1000,
+      "zone_type": "food",
+      "connected_zones": ["level-3"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "outdoor-plaza",
+      "name": "Outdoor Plaza",
+      "capacity": 4000,
+      "area_sqm": 2500,
+      "zone_type": "outdoor",
+      "connected_zones": ["level-1"],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "mrt-link",
+      "name": "MRT Connection Walkway",
+      "capacity": 1500,
+      "area_sqm": 600,
+      "zone_type": "transport",
+      "connected_zones": ["level-1"],
+      "connected_gates": ["mrt-connection"]
+    },
+    {
+      "zone_id": "parking",
+      "name": "Basement Parking",
+      "capacity": 2000,
+      "area_sqm": 10000,
+      "zone_type": "parking",
+      "connected_zones": ["level-1"],
+      "connected_gates": ["parking-entrance"]
+    }
+  ]
+}

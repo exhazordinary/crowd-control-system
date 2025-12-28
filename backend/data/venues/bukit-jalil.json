@@ -1,0 +1,171 @@
+{
+  "venue_id": "bukit-jalil",
+  "name": "Stadium Nasional Bukit Jalil",
+  "venue_type": "stadium",
+  "total_capacity": 87411,
+  "location": {
+    "lat": 3.0547,
+    "lng": 101.6911,
+    "address": "Jalan Barat, Bukit Jalil",
+    "city": "Kuala Lumpur"
+  },
+  "gates": [
+    {
+      "gate_id": "gate-north",
+      "name": "Gate A - North",
+      "capacity_per_minute": 300,
+      "location": [400, 50],
+      "is_emergency_exit": false,
+      "connected_zones": ["north-stand", "concourse-north"]
+    },
+    {
+      "gate_id": "gate-south",
+      "name": "Gate B - South",
+      "capacity_per_minute": 350,
+      "location": [400, 750],
+      "is_emergency_exit": false,
+      "connected_zones": ["south-stand", "concourse-south"]
+    },
+    {
+      "gate_id": "gate-east",
+      "name": "Gate C - East",
+      "capacity_per_minute": 250,
+      "location": [750, 400],
+      "is_emergency_exit": false,
+      "connected_zones": ["east-stand", "concourse-east"]
+    },
+    {
+      "gate_id": "gate-west",
+      "name": "Gate D - West",
+      "capacity_per_minute": 280,
+      "location": [50, 400],
+      "is_emergency_exit": false,
+      "connected_zones": ["west-stand", "concourse-west"]
+    },
+    {
+      "gate_id": "gate-vip",
+      "name": "VIP Entrance",
+      "capacity_per_minute": 100,
+      "location": [400, 100],
+      "is_emergency_exit": false,
+      "connected_zones": ["vip-section"]
+    },
+    {
+      "gate_id": "emergency-1",
+      "name": "Emergency Exit 1",
+      "capacity_per_minute": 500,
+      "location": [200, 50],
+      "is_emergency_exit": true,
+      "connected_zones": ["concourse-north"]
+    },
+    {
+      "gate_id": "emergency-2",
+      "name": "Emergency Exit 2",
+      "capacity_per_minute": 500,
+      "location": [600, 750],
+      "is_emergency_exit": true,
+      "connected_zones": ["concourse-south"]
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": "north-stand",
+      "name": "North Stand",
+      "capacity": 22000,
+      "area_sqm": 8000,
+      "zone_type": "seating",
+      "connected_zones": ["concourse-north"],
+      "connected_gates": ["gate-north"]
+    },
+    {
+      "zone_id": "south-stand",
+      "name": "South Stand",
+      "capacity": 25000,
+      "area_sqm": 9000,
+      "zone_type": "seating",
+      "connected_zones": ["concourse-south"],
+      "connected_gates": ["gate-south"]
+    },
+    {
+      "zone_id": "east-stand",
+      "name": "East Stand",
+      "capacity": 20000,
+      "area_sqm": 7500,
+      "zone_type": "seating",
+      "connected_zones": ["concourse-east"],
+      "connected_gates": ["gate-east"]
+    },
+    {
+      "zone_id": "west-stand",
+      "name": "West Stand",
+      "capacity": 18000,
+      "area_sqm": 7000,
+      "zone_type": "seating",
+      "connected_zones": ["concourse-west"],
+      "connected_gates": ["gate-west"]
+    },
+    {
+      "zone_id": "vip-section",
+      "name": "VIP Section",
+      "capacity": 2411,
+      "area_sqm": 2000,
+      "zone_type": "vip",
+      "connected_zones": ["concourse-north"],
+      "connected_gates": ["gate-vip"]
+    },
+    {
+      "zone_id": "concourse-north",
+      "name": "North Concourse",
+      "capacity": 5000,
+      "area_sqm": 3000,
+      "zone_type": "concourse",
+      "connected_zones": ["north-stand", "vip-section", "concourse-east", "concourse-west"],
+      "connected_gates": ["gate-north", "emergency-1"]
+    },
+    {
+      "zone_id": "concourse-south",
+      "name": "South Concourse",
+      "capacity": 6000,
+      "area_sqm": 3500,
+      "zone_type": "concourse",
+      "connected_zones": ["south-stand", "concourse-east", "concourse-west"],
+      "connected_gates": ["gate-south", "emergency-2"]
+    },
+    {
+      "zone_id": "concourse-east",
+      "name": "East Concourse",
+      "capacity": 4000,
+      "area_sqm": 2500,
+      "zone_type": "concourse",
+      "connected_zones": ["east-stand", "concourse-north", "concourse-south"],
+      "connected_gates": ["gate-east"]
+    },
+    {
+      "zone_id": "concourse-west",
+      "name": "West Concourse",
+      "capacity": 4000,
+      "area_sqm": 2500,
+      "zone_type": "concourse",
+      "connected_zones": ["west-stand", "concourse-north", "concourse-south"],
+      "connected_gates": ["gate-west"]
+    },
+    {
+      "zone_id": "parking-a",
+      "name": "Parking Lot A",
+      "capacity": 3000,
+      "area_sqm": 15000,
+      "zone_type": "parking",
+      "connected_zones": [],
+      "connected_gates": []
+    },
+    {
+      "zone_id": "lrt-station",
+      "name": "LRT Bukit Jalil",
+      "capacity": 2000,
+      "area_sqm": 800,
+      "zone_type": "transport",
+      "connected_zones": [],
+      "connected_gates": []
+    }
+  ]
+}
